@@ -3,17 +3,18 @@ import { Box, Flex, useColorModeValue, chakra, Link } from "@chakra-ui/react";
 function Section(props) {
   return (
     <Flex
-      bg={useColorModeValue("#F9FAFB", "gray.600")}
-      p={50}
+    //   sx={{transform:"skewY(3.5deg)"}}
+      bg={useColorModeValue("red", "gray.600")}
+      p={20}
       w="full"
       alignItems="center"
       justifyContent="center"
     >
       <Box
         bg={useColorModeValue("white", "gray.800")}
-        mx={{ lg: 8 }}
+        // mx={{ lg: 8 }}
         display={{ lg: "flex" }}
-        maxW={{ lg: "5xl" }}
+        // maxW={{ lg: "5xl" }}
         shadow={{ lg: "lg" }}
         rounded={{ lg: "lg" }}
       >
@@ -29,7 +30,10 @@ function Section(props) {
           ></Box>
         </Box>
 
-        <Box py={12} px={6} maxW={{ base: "xl", lg: "5xl" }} w={{ lg: "50%" }}>
+        <Box py={12} 
+        px={6} 
+        maxW={{ base: "xl", lg: "5xl" }} 
+        w={{ lg: "50%" }}>
           <chakra.h2
             fontSize={{ base: "2xl", md: "3xl" }}
             color={useColorModeValue("gray.800", "white")}

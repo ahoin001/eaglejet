@@ -2,7 +2,6 @@ import React from "react";
 import {
   chakra,
   Box,
-  Flex,
   useColorModeValue,
   SimpleGrid,
   GridItem,
@@ -12,10 +11,8 @@ import {
   FormControl,
   FormLabel,
   Input,
-  Button,
   Select,
   Checkbox,
-  CheckboxGroup,
 } from "@chakra-ui/react";
 
 // TODO Mark Required fields after asking which are necessary
@@ -24,11 +21,11 @@ export default function Component() {
   return (
     <Box
       bg={useColorModeValue("gray.500", "inherit")}
-      p={10}
+      p={6}
       width="full"
       maxW="8xl"
     >
-      <Box bg={"blue.200"}>
+      <Box bg={"red.100"}>
         <SimpleGrid
           display={{ base: "initial", md: "grid" }}
           columns={{ md: 3 }}
@@ -68,7 +65,7 @@ export default function Component() {
                 spacing={6}
               >
                 <SimpleGrid columns={6} spacing={6}>
-                  <FormControl as={GridItem} colSpan={[6, 3]}>
+                  <FormControl as={GridItem} colSpan={[6, 2]}>
                     <FormLabel
                       htmlFor="first_name"
                       fontSize="sm"
@@ -92,7 +89,7 @@ export default function Component() {
                     />
                   </FormControl>
 
-                  <FormControl as={GridItem} colSpan={[6, 3]}>
+                  <FormControl as={GridItem} colSpan={[6, 2]}>
                     <FormLabel
                       htmlFor="phone_number"
                       fontSize="sm"
@@ -115,7 +112,7 @@ export default function Component() {
                     />
                   </FormControl>
 
-                  <FormControl as={GridItem} colSpan={[6, 3]}>
+                  <FormControl as={GridItem} colSpan={[6, 2]}>
                     <FormLabel
                       htmlFor="email_address"
                       fontSize="sm"
@@ -165,7 +162,7 @@ export default function Component() {
                     </Select>
                   </FormControl>
 
-                  <FormControl as={GridItem} colSpan={6}>
+                  <FormControl as={GridItem} colSpan={[6, 3]}>
                     <FormLabel
                       htmlFor="street_address"
                       fontSize="sm"
@@ -188,7 +185,7 @@ export default function Component() {
                     />
                   </FormControl>
 
-                  <FormControl as={GridItem} colSpan={3}>
+                  <FormControl as={GridItem} colSpan={(6, 3)}>
                     <FormLabel
                       htmlFor="nationality"
                       fontSize="sm"
@@ -211,7 +208,7 @@ export default function Component() {
                     />
                   </FormControl>
 
-                  <FormControl as={GridItem} colSpan={[6, 3, null, 2]}>
+                  <FormControl as={GridItem} colSpan={[6, 3]}>
                     <FormLabel
                       htmlFor="US_work_permit"
                       fontSize="sm"
@@ -228,7 +225,7 @@ export default function Component() {
                     </Stack>
                   </FormControl>
 
-                  <FormControl as={GridItem} colSpan={[6, 6, null, 2]}>
+                  <FormControl as={GridItem} colSpan={[6, 2]}>
                     <FormLabel
                       htmlFor="licenses"
                       fontSize="sm"
@@ -251,7 +248,7 @@ export default function Component() {
                     />
                   </FormControl>
 
-                  <FormControl as={GridItem} colSpan={[6, 3, null, 2]}>
+                  <FormControl as={GridItem} colSpan={[6, 2]}>
                     <FormLabel
                       htmlFor="ratings"
                       fontSize="sm"
@@ -275,7 +272,7 @@ export default function Component() {
                   </FormControl>
 
                   {/*TODO : Adjust attributes for whatever we call this element */}
-                  <FormControl as={GridItem} colSpan={[6, 3, null, 2]}>
+                  <FormControl as={GridItem} colSpan={[6, 2]}>
                     <FormLabel
                       htmlFor="postal_code"
                       fontSize="sm"
